@@ -29,6 +29,7 @@ namespace FaceDetectionApp
             filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo device in filter)
                 cboDevice.Items.Add(device.Name);
+            cboDevice.Items.Insert(0, "Please select a camera");
             cboDevice.SelectedIndex = 0;
             device = new VideoCaptureDevice();
         }
